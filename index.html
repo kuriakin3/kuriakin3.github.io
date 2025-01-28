@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursiones en Barco - Antonius</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e0f7fa;
+            color: #004d40;
+        }
+
+        header {
+            background-color: rgba(0, 77, 64, 0.9);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            background-color: rgba(0, 77, 64, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('https://i.imgur.com/MijeBF4.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn {
+            background-color: #ff6f61;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff4a3d;
+        }
+
+        .services {
+            background: url('https://i.imgur.com/roHkYgG.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        .services h2, .gallery h2, .reservations h2, .contact h2, .captain h2 {
+            margin-bottom: 40px;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services p {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+        }
+
+        .gallery, .reservations, .contact, .captain {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-images {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .gallery-images img {
+            width: 30%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-images img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #004d40;
+        }
+
+        form input, form select, form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            background-color: #ff6f61;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff4a3d;
+        }
+
+        footer {
+            background-color: rgba(0, 77, 64, 0.9);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .captain img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .captain p {
+            font-size: 1.1em;
+            color: #004d40;
+        }
+
+        .captain .crew {
+            margin-top: 30px;
+        }
+
+        .captain .crew h3 {
+            color: #004d40;
+            margin-bottom: 20px;
+        }
+
+        .captain .crew p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Excursiones en Barco - Antonius</h1>
+    </header>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#capitan">Nuestro Equipo</a>
+        <a href="#reservas">Reservas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <h2>Vive una experiencia inolvidable</h2>
+        <p>Disfruta de avistamiento de delfines, salidas de pesca y más en Gibraltar.</p>
+        <a href="#reservas" class="btn">Reservar ahora</a>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <p><strong>Avistamiento de Delfines y Ballenas</strong></p>
+        <p>2 horas - 350€ | 4 horas - 550€ | 6 horas - 800€</p>
+        <p>Incluye bebidas frías y tapas.</p>
+        <p><strong>Salidas de Pesca</strong></p>
+        <p>Consulta nuestras tarifas personalizadas.</p>
+    </section>
+
+    <section id="capitan" class="captain">
+        <h2>Nuestro Equipo</h2>
+        <img src="https://i.imgur.com/Ur4AUee.jpg" alt="Capitán Oscar">
+        <p><strong>Capitán Oscar</strong></p>
+        <p>Con más de 20 años de experiencia en el mar, el Capitán Oscar es el alma de nuestras excursiones. Su pasión por la navegación y la pesca es contagiosa, y siempre se asegura de que cada viaje sea una experiencia única.</p>
+
+        <div class="crew">
+            <h3>El equipo que hace posible la magia</h3>
+            <p><strong>Primer Oficial Alvaro</strong>: Alvaro y Oscar se conocieron hace muchos años y desde entonces han navegado y pescado juntos por todo el mundo. Su complicidad y experiencia hacen que cada excursión sea segura y divertida.</p>
+            <p><strong>Segundo Oficial Hamid</strong>: Hamid es un miembro valioso del equipo, aunque no puede venir tan a menudo como le gustaría. Su esposa lo mantiene ocupado en tierra, pero cuando está a bordo, su energía y conocimiento son invaluables.</p>
+        </div>
+    </section>
+
+    <section id="galeria" class="gallery">
+        <h2>Galería</h2>
+        <div class="gallery-images">
+            <img src="https://i.imgur.com/OzNbZax.jpg" alt="Barco en el mar">
+            <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar">
+            <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando">
+            <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva">
+            <img src="https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Avistamiento de delfines">
+            <img src="https://images.unsplash.com/photo-1505245208761-ba872912fac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Salida de pesca">
+        </div>
+    </section>
+
+    <section id="reservas" class="reservations">
+        <h2>Reservas</h2>
+        <form id="reservation-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="service">Servicio:</label>
+            <select id="service" name="service" required>
+                <option value="2h">2 horas - 350€</option>
+                <option value="4h">4 horas - 550€</option>
+                <option value="6h">6 horas - 800€</option>
+            </select>
+
+            <button type="submit" class="btn">Reservar</button>
+        </form>
+        <p>La reserva está sujeta a las condiciones climáticas. El pago se realiza el día de la excursión.</p>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <p>Teléfono: <a href="tel:+34640026586" style="color: #004d40;">+34 640 026 586</a></p>
+        <p>Email: info@excursionesgibraltar.com</p>
+        <p>Barco: Antonius</p>
+        <p>Ubicación: Puerto de Gibraltar</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Excursiones en Barco - Antonius</p>
+    </footer>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Gracias por tu reserva. Nos pondremos en contacto contigo pronto.');
+        });
+    </script>
+</body>
+</html>
