@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excursiones en Barco - Antonius</title>
     <style>
-        /* Estilos CSS */
+        /* Estilos CSS (sin cambios) */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -136,19 +136,19 @@
             flex-wrap: wrap;
         }
 
-        .gallery-images img {
+        .gallery-images img, .gallery-images iframe {
             width: 30%;
             margin-bottom: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
 
-        .gallery-images img:hover {
+        .gallery-images img:hover, .gallery-images iframe:hover {
             transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
-            .gallery-images img {
+            .gallery-images img, .gallery-images iframe {
                 width: 100%;
                 margin-bottom: 10px;
             }
@@ -256,7 +256,7 @@
         <div class="crew">
             <h3>El equipo que hace posible la magia</h3>
             <p><strong>Primer Oficial Alvaro</strong>: Alvaro y Oscar se conocieron hace muchos años y desde entonces han navegado y pescado juntos por todo el mundo. Su complicidad y experiencia hacen que cada excursión sea segura y divertida.</p>
-            <p><strong>Segundo Oficial Hamid</strong>: Hamid es un miembro valioso del equipo, aunque no puede venir tan a menudo como le gustaría. Su esposa lo mantiene ocupado en tierra, pero cuando está a bordo, su energía y conocimiento son invaluables.</p>
+            <p><strong>Segundo Oficial Hamid</strong>: Hamid es un miembro valioso del equipo, aunque no puede venir tan a menudo como le gustaría debido a su trabajo en un estanco. Sin embargo, cuando está a bordo, su energía y conocimiento son invaluables. Además, Hamid es un especialista en hacer nudos marineros, lo que lo convierte en un recurso indispensable para cualquier situación en el mar.</p>
         </div>
     </section>
 
@@ -267,8 +267,10 @@
             <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar">
             <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando">
             <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva">
-            <img src="https://images.unsplash.com/photo-1539593395743-7da5ee10ff07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Avistamiento de delfines">
-            <img src="https://images.unsplash.com/photo-1505245208761-ba872912fac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Salida de pesca">
+            <!-- Video de YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/s_T69GecZCc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Video de Imgur -->
+            <iframe src="https://i.imgur.com/7yoHu7n.mp4" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -319,3 +321,6 @@
     </script>
 </body>
 </html>
+
+
+
