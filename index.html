@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Excursiones en barco en Gibraltar con avistamiento de delfines, pesca y más. Vive una experiencia única con el Capitán Oscar y su equipo.">
+    <meta name="keywords" content="excursiones en barco, Gibraltar, avistamiento de delfines, pesca, Capitán Oscar">
+    <meta name="author" content="Excursiones en Barco - Antonius">
     <title>Excursiones en Barco - Antonius</title>
     <style>
-        /* Estilos CSS (sin cambios) */
+        /* Estilos CSS */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -35,10 +38,15 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
         }
 
         .hero {
-            background: url('https://i.imgur.com/P1g7YOk.jpg') no-repeat center center/cover; /* Imagen de portada */
+            background: url('https://i.imgur.com/P1g7YOk.jpg') no-repeat center center/cover;
             color: #ffffff;
             padding: 150px 20px;
             text-align: center;
@@ -87,7 +95,7 @@
         }
 
         .services {
-            background: url('https://i.imgur.com/VluIQ3Z.jpg') no-repeat center center/cover; /* Nueva imagen de servicios */
+            background: url('https://i.imgur.com/VluIQ3Z.jpg') no-repeat center center/cover;
             color: #ffffff;
             padding: 50px 20px;
             text-align: center;
@@ -104,7 +112,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.3); /* Reducimos la opacidad del fondo oscuro */
+            background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
         }
 
@@ -222,6 +230,23 @@
             font-size: 1em;
             line-height: 1.6;
         }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            display: none;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #ff4a3d;
+        }
     </style>
 </head>
 <body>
@@ -230,17 +255,17 @@
     </header>
 
     <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#capitan">Nuestro Equipo</a>
-        <a href="#reservas">Reservas</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#inicio" aria-label="Ir a Inicio">Inicio</a>
+        <a href="#servicios" aria-label="Ir a Servicios">Servicios</a>
+        <a href="#capitan" aria-label="Ir a Nuestro Equipo">Nuestro Equipo</a>
+        <a href="#reservas" aria-label="Ir a Reservas">Reservas</a>
+        <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
     </nav>
 
     <section id="inicio" class="hero">
         <h2>Vive una experiencia inolvidable</h2>
         <p>Disfruta de avistamiento de delfines, salidas de pesca y más en Gibraltar.</p>
-        <a href="#reservas" class="btn">Reservar ahora</a>
+        <a href="#reservas" class="btn" aria-label="Reservar ahora">Reservar ahora</a>
     </section>
 
     <section id="servicios" class="services">
@@ -268,15 +293,15 @@
     <section id="galeria" class="gallery">
         <h2>Galería</h2>
         <div class="gallery-images">
-            <img src="https://i.imgur.com/OzNbZax.jpg" alt="Barco en el mar">
-            <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar">
-            <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando">
-            <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva">
-            <img src="https://i.imgur.com/x3yjMtU.jpg" alt="Pesca hamid">
+            <img src="https://i.imgur.com/OzNbZax.jpg" alt="Barco en el mar" loading="lazy">
+            <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar" loading="lazy">
+            <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando" loading="lazy">
+            <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva" loading="lazy">
+            <img src="https://i.imgur.com/x3yjMtU.jpg" alt="Pesca hamid" loading="lazy">
             
             <!-- Videos de YouTube añadidos -->
-            <iframe src="https://www.youtube.com/embed/Xfl0VaeiR8I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/zlWskHSMq9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/Xfl0VaeiR8I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            <iframe src="https://www.youtube.com/embed/zlWskHSMq9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
 
@@ -313,18 +338,68 @@
         <p>Email: info@excursionesgibraltar.com</p>
         <p>Barco: Antonius</p>
         <p>Ubicación: Puerto de Gibraltar</p>
+        <div style="width: 100%; height: 300px; margin-top: 20px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25670.123456789012!2d-5.3556789!3d36.1401234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA4JzIxLjgiTiA1wrAyMScxMi4xIlc!5e0!3m2!1ses!2ses!4v1621234567890!5m2!1ses!2ses" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Excursiones en Barco - Antonius</p>
     </footer>
 
+    <a href="#inicio" class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</a>
+
     <script>
+        // Scroll suave
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Botón "Volver arriba"
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Validación del formulario
         document.getElementById('reservation-form').addEventListener('submit', function(event) {
-            event.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (!name || !email || !date || !time) {
+                alert('Por favor, completa todos los campos.');
+                event.preventDefault();
+                return;
+            }
+
+            const selectedDate = new Date(date);
+            const today = new Date();
+            if (selectedDate < today) {
+                alert('Por favor, selecciona una fecha futura.');
+                event.preventDefault();
+                return;
+            }
+
             alert('Gracias por tu reserva. Nos pondremos en contacto contigo pronto.');
         });
     </script>
 </body>
 </html>
-
