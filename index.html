@@ -38,7 +38,7 @@
         }
 
         .hero {
-            background: url('https://i.imgur.com/MijeBF4.jpg') no-repeat center center/cover;
+            background: url('https://i.imgur.com/P1g7YOk.jpg') no-repeat center center/cover; /* Imagen de portada */
             color: #ffffff;
             padding: 150px 20px;
             text-align: center;
@@ -87,7 +87,7 @@
         }
 
         .services {
-            background: url('https://i.imgur.com/roHkYgG.jpg') no-repeat center center/cover;
+            background: url('https://i.imgur.com/VluIQ3Z.jpg') no-repeat center center/cover; /* Nueva imagen de servicios */
             color: #ffffff;
             padding: 50px 20px;
             text-align: center;
@@ -104,7 +104,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.3); /* Reducimos la opacidad del fondo oscuro */
             border-radius: 10px;
         }
 
@@ -141,6 +141,11 @@
             margin-bottom: 20px;
             border-radius: 10px;
             transition: transform 0.3s ease;
+        }
+
+        .gallery-images iframe {
+            aspect-ratio: 16 / 9;
+            height: auto;
         }
 
         .gallery-images img:hover, .gallery-images iframe:hover {
@@ -267,9 +272,12 @@
             <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar">
             <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando">
             <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva">
-            <iframe width="560" height="315" src="https://www.youtube.com/shorts/Xfl0VaeiR8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <img src="https://i.imgur.com/x3yjMtU.jpg" alt="Pesca hamid">
             
+            <!-- Videos de YouTube añadidos -->
+            <iframe src="https://www.youtube.com/embed/Xfl0VaeiR8I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/zlWskHSMq9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </section>
 
     <section id="reservas" class="reservations">
@@ -319,6 +327,4 @@
     </script>
 </body>
 </html>
-
-
 
