@@ -1,346 +1,107 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Excursiones en barco en Gibraltar con avistamiento de delfines, pesca y más. Vive una experiencia única con el Capitán Oscar y su equipo.">
-    <meta name="keywords" content="excursiones en barco, Gibraltar, avistamiento de delfines, pesca, Capitán Oscar">
-    <meta name="author" content="Excursiones en Barco - Antonius">
-    <title>Excursiones en Barco - Antonius</title>
-    <style>
-        /* Estilos CSS */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #e0f7fa;
-            color: #004d40;
-        }
-
-        header {
-            background-color: rgba(0, 77, 64, 0.9);
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            background-color: rgba(0, 77, 64, 0.8);
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff6f61;
-        }
-
-        .hero {
-            background: url('https://i.imgur.com/P1g7YOk.jpg') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 150px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .hero h2 {
-            font-size: 2.5em;
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn {
-            background-color: #ff6f61;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #ff4a3d;
-        }
-
-        .services {
-            background: url('https://i.imgur.com/VluIQ3Z.jpg') no-repeat center center/cover;
-            color: #ffffff;
-            padding: 50px 20px;
-            text-align: center;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-        }
-
-        .services h2, .gallery h2, .reservations h2, .contact h2, .captain h2 {
-            margin-bottom: 40px;
-            color: #ffffff;
-            position: relative;
-            z-index: 1;
-        }
-
-        .services p {
-            position: relative;
-            z-index: 1;
-            color: #ffffff;
-        }
-
-        .gallery, .reservations, .contact, .captain {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-images {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .gallery-images img, .gallery-images iframe {
-            width: 30%;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-images iframe {
-            aspect-ratio: 16 / 9;
-            height: auto;
-        }
-
-        .gallery-images img:hover, .gallery-images iframe:hover {
-            transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            .gallery-images img, .gallery-images iframe {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-        }
-
-        form {
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        form label {
-            display: block;
-            margin-bottom: 5px;
-            color: #004d40;
-        }
-
-        form input, form select, form button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            background-color: #ff6f61;
-            color: #ffffff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        form button:hover {
-            background-color: #ff4a3d;
-        }
-
-        footer {
-            background-color: rgba(0, 77, 64, 0.9);
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .captain img {
-            width: 200px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .captain p {
-            font-size: 1.1em;
-            color: #004d40;
-        }
-
-        .captain .crew {
-            margin-top: 30px;
-        }
-
-        .captain .crew h3 {
-            color: #004d40;
-            margin-bottom: 20px;
-        }
-
-        .captain .crew p {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #ff6f61;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 50%;
-            text-decoration: none;
-            display: none;
-            z-index: 1000;
-        }
-
-        .back-to-top:hover {
-            background-color: #ff4a3d;
-        }
-    </style>
+    <meta name="description" content="Boat excursions in Gibraltar with dolphin watching, fishing, and more. Live a unique experience with Captain Oscar and his team.">
+    <meta name="keywords" content="boat excursions, Gibraltar, dolphin watching, fishing, Captain Oscar">
+    <meta name="author" content="Boat Excursions - Antonius">
+    <title>Boat Excursions - Antonius</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Excursiones en Barco - Antonius</h1>
+        <h1>Boat Excursions - Antonius</h1>
     </header>
 
     <nav>
-        <a href="#inicio" aria-label="Ir a Inicio">Inicio</a>
-        <a href="#servicios" aria-label="Ir a Servicios">Servicios</a>
-        <a href="#capitan" aria-label="Ir a Nuestro Equipo">Nuestro Equipo</a>
-        <a href="#reservas" aria-label="Ir a Reservas">Reservas</a>
-        <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
+        <a href="#home" aria-label="Go to Home">Home</a>
+        <a href="#services" aria-label="Go to Services">Services</a>
+        <a href="#captain" aria-label="Go to Our Team">Our Team</a>
+        <a href="#reservations" aria-label="Go to Reservations">Reservations</a>
+        <a href="#contact" aria-label="Go to Contact">Contact</a>
+        <a href="/es/" aria-label="Cambiar a español">Español</a>
     </nav>
 
-    <section id="inicio" class="hero">
-        <h2>Vive una experiencia inolvidable</h2>
-        <p>Disfruta de avistamiento de delfines, salidas de pesca y más en Gibraltar.</p>
-        <a href="#reservas" class="btn" aria-label="Reservar ahora">Reservar ahora</a>
+    <section id="home" class="hero">
+        <h2>Live an unforgettable experience</h2>
+        <p>Enjoy dolphin watching, fishing trips, and more in Gibraltar.</p>
+        <a href="#reservations" class="btn" aria-label="Book now">Book now</a>
     </section>
 
-    <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <p><strong>Avistamiento de Delfines y Calderones</strong></p>
-        <p>2 horas - 350€ | 4 horas - 550€ | 6 horas - 800€</p>
-        <p>Incluye bebidas frías y tapas.</p>
-        <p><strong>Salidas de Pesca</strong></p>
-        <p>Consulta nuestras tarifas personalizadas.</p>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <p><strong>Dolphin and Whale Watching</strong></p>
+        <p>2 hours - 350€ | 4 hours - 550€ | 6 hours - 800€</p>
+        <p>Includes cold drinks and snacks.</p>
+        <p><strong>Fishing Trips</strong></p>
+        <p>Contact us for personalized rates.</p>
     </section>
 
-    <section id="capitan" class="captain">
-        <h2>Nuestro Equipo</h2>
-        <img src="https://i.imgur.com/Ur4AUee.jpg" alt="Capitán Oscar">
-        <p><strong>Capitán Oscar</strong></p>
-        <p>Con más de 20 años de experiencia en el mar, el Capitán Oscar es el alma de nuestras excursiones. Su pasión por la navegación y la pesca es contagiosa, y siempre se asegura de que cada viaje sea una experiencia única.</p>
+    <section id="captain" class="captain">
+        <h2>Our Team</h2>
+        <img src="assets/captain.jpg" alt="Captain Oscar">
+        <p><strong>Captain Oscar</strong></p>
+        <p>With over 20 years of experience at sea, Captain Oscar is the heart of our excursions. His passion for sailing and fishing is contagious, and he always ensures that every trip is a unique experience.</p>
 
         <div class="crew">
-            <h3>El equipo que hace posible la magia</h3>
-            <p><strong>Primer Oficial Alberto</strong>: Alberto y Oscar se conocieron hace muchos años y desde entonces han navegado y pescado juntos por todo el mundo. Su complicidad y experiencia hacen que cada excursión sea segura y divertida.</p>
-            <p><strong>Segundo Oficial Hamid</strong>: Hamid es un miembro valioso del equipo, cuando está a bordo, su energía es invaluable, lo que lo convierte en un recurso indispensable para cualquier situación en el mar.</p>
+            <h3>The team that makes the magic happen</h3>
+            <p><strong>First Officer Alberto</strong>: Alberto and Oscar met many years ago and have been sailing and fishing together around the world ever since. Their camaraderie and experience make every excursion safe and fun.</p>
+            <p><strong>Second Officer Hamid</strong>: Hamid is a valuable member of the team. When he's on board, his energy is invaluable, making him an indispensable resource for any situation at sea.</p>
         </div>
     </section>
 
-    <section id="galeria" class="gallery">
-        <h2>Galería</h2>
+    <section id="gallery" class="gallery">
+        <h2>Gallery</h2>
         <div class="gallery-images">
-            <img src="https://i.imgur.com/OzNbZax.jpg" alt="Barco en el mar" loading="lazy">
-            <img src="https://i.imgur.com/TKdXQcS.jpg" alt="Atardecer en el mar" loading="lazy">
-            <img src="https://i.imgur.com/VafAqCK.jpg" alt="Delfines saltando" loading="lazy">
-            <img src="https://i.imgur.com/nwUcfNX.jpg" alt="Pesca deportiva" loading="lazy">
-            <img src="https://i.imgur.com/x3yjMtU.jpg" alt="Pesca hamid" loading="lazy">
+            <img src="assets/boat1.jpg" alt="Boat at sea" loading="lazy">
+            <img src="assets/sunset.jpg" alt="Sunset at sea" loading="lazy">
+            <img src="assets/dolphins.jpg" alt="Dolphins jumping" loading="lazy">
+            <img src="assets/fishing1.jpg" alt="Sport fishing" loading="lazy">
+            <img src="assets/fishing2.jpg" alt="Fishing with Hamid" loading="lazy">
             
-            <!-- Videos de YouTube añadidos -->
+            <!-- YouTube videos added -->
             <iframe src="https://www.youtube.com/embed/Xfl0VaeiR8I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
             <iframe src="https://www.youtube.com/embed/zlWskHSMq9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
         </div>
     </section>
 
-    <section id="reservas" class="reservations">
-        <h2>Reservas</h2>
+    <section id="reservations" class="reservations">
+        <h2>Reservations</h2>
         <form id="reservation-form">
-            <label for="name">Nombre:</label>
+            <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="date">Fecha:</label>
+            <label for="date">Date:</label>
             <input type="date" id="date" name="date" required>
 
-            <label for="time">Hora:</label>
+            <label for="time">Time:</label>
             <input type="time" id="time" name="time" required>
 
-            <label for="service">Servicio:</label>
+            <label for="service">Service:</label>
             <select id="service" name="service" required>
-                <option value="2h">2 horas - 350€</option>
-                <option value="4h">4 horas - 550€</option>
-                <option value="6h">6 horas - 800€</option>
+                <option value="2h">2 hours - 350€</option>
+                <option value="4h">4 hours - 550€</option>
+                <option value="6h">6 hours - 800€</option>
             </select>
 
-            <button type="submit" class="btn">Reservar</button>
+            <button type="submit" class="btn">Book</button>
         </form>
-        <p>La reserva está sujeta a las condiciones climáticas. El pago se realiza el día de la excursión.</p>
+        <p>The reservation is subject to weather conditions. Payment is made on the day of the excursion.</p>
     </section>
 
-    <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <p>Teléfono: <a href="tel:+34640026486" style="color: #004d40;">+34 640 026 486</a></p>
-        <p>Email: info@excursionesgibraltar.com</p>
-        <p>Barco: Antonius</p>
-        <p>Ubicación: Puerto de Gibraltar</p>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Phone: <a href="tel:+34640026486" style="color: #004d40;">+34 640 026 486</a></p>
+        <p>Email: info@gibraltarboatexcursions.com</p>
+        <p>Boat: Antonius</p>
+        <p>Location: Gibraltar Port</p>
         <div style="width: 100%; height: 300px; margin-top: 20px;">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25670.123456789012!2d-5.3556789!3d36.1401234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA4JzIxLjgiTiA1wrAyMScxMi4xIlc!5e0!3m2!1ses!2ses!4v1621234567890!5m2!1ses!2ses" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25670.123456789012!2d-5.3556789!3d36.1401234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDA4JzIxLjgiTiA1wrAyMScxMi4xIlc!5e0!3m2!1sen!2ses!4v1621234567890!5m2!1sen!2ses" 
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -351,13 +112,13 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Excursiones en Barco - Antonius</p>
+        <p>&copy; 2025 Boat Excursions - Antonius</p>
     </footer>
 
-    <a href="#inicio" class="back-to-top" id="back-to-top" aria-label="Volver arriba">↑</a>
+    <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">↑</a>
 
     <script>
-        // Scroll suave
+        // Smooth scroll
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -367,7 +128,7 @@
             });
         });
 
-        // Botón "Volver arriba"
+        // "Back to top" button
         window.addEventListener('scroll', function() {
             const backToTopButton = document.getElementById('back-to-top');
             if (window.scrollY > 300) {
@@ -377,7 +138,7 @@
             }
         });
 
-        // Validación del formulario
+        // Form validation
         document.getElementById('reservation-form').addEventListener('submit', function(event) {
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
@@ -385,7 +146,7 @@
             const time = document.getElementById('time').value;
 
             if (!name || !email || !date || !time) {
-                alert('Por favor, completa todos los campos.');
+                alert('Please fill out all fields.');
                 event.preventDefault();
                 return;
             }
@@ -393,12 +154,12 @@
             const selectedDate = new Date(date);
             const today = new Date();
             if (selectedDate < today) {
-                alert('Por favor, selecciona una fecha futura.');
+                alert('Please select a future date.');
                 event.preventDefault();
                 return;
             }
 
-            alert('Gracias por tu reserva. Nos pondremos en contacto contigo pronto.');
+            alert('Thank you for your reservation. We will contact you soon.');
         });
     </script>
 </body>
